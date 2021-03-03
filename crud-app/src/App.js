@@ -15,6 +15,8 @@ function App() {
   const [editing , setEditing] = useState(false);
   const initialFormState = {id: null , name: '' , category:'' , price: ''};
   const [currentBook , setCurrentBook] = useState(initialFormState);
+  const [search , setSearch] = useState(null);
+
   const toggleEdit = book => {
     setEditing(true);
     setDisplay(true);
@@ -32,6 +34,12 @@ function App() {
     setBooks(books.map(book => (
       book.id === id ? updatedBook : book)
     ))
+  }
+
+  const searchSpace = e => {
+    let keyword = e.target.value;
+    setSearch(keyword);
+    console.log(keyword)
   }
   return (
     <div className="container">
@@ -55,6 +63,8 @@ function App() {
         <div className='view-area'>
           <h2>View Books</h2>
           <BooksTable
+           search = {search}
+           searchSpace = {searchSpace}
            books={books} 
            deleteBook={deleteBook} 
            toggleEdit={toggleEdit} />
