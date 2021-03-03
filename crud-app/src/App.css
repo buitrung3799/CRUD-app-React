@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+.manage-area{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: auto;
+
+}
+.view-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}

@@ -1,0 +1,54 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+label {
+    margin-bottom: 5px ;
+    font-weight: bold;
+}
+button {
+    margin: 1rem 0;
+    width: 30%;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #3D5BFA;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    transition: 0.3s;
+    background-color: blue;
+}
+input[type="text"] {
+    width: 30rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    transition: 0.3s;
+    outline: none;
+    border-radius: 5px;
+}
+input[type="text"]:focus {
+    border: 3px solid #3D5BFA;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+.display {
+    animation-duration: 0.8s; 
+    animation-fill-mode: both; 
+    animation-timing-function: ease-out;
+    animation-name: FadeInLeft;
+}
+@keyframes FadeInLeft {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+}
